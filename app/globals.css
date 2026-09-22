@@ -2974,3 +2974,1840 @@ img {
   }
 
 }
+
+
+
+
+
+
+
+/* =====================================================
+   PROCESSO CINEMATOGRÁFICO
+===================================================== */
+
+.processo {
+  position: relative;
+
+  height: 100vh;
+
+  background: #080604;
+
+  overflow: hidden;
+}
+
+.process-stage {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(155, 82, 38, 0.11),
+      transparent 35%
+    ),
+    #080604;
+}
+
+
+/* GRID DE FUNDO */
+
+.process-stage::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.16;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  mask-image:
+    radial-gradient(
+      circle,
+      black 10%,
+      transparent 75%
+    );
+}
+
+
+/* =====================================================
+   MADEIRA
+===================================================== */
+
+.process-wood {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 320px;
+  height: 470px;
+
+  transform: translate(-50%, -50%);
+
+  overflow: hidden;
+
+  border-radius: 6px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #3c1d0e,
+      #8d4b24 35%,
+      #5d2d15 65%,
+      #2c140a
+    );
+
+  box-shadow:
+    0 40px 100px rgba(0,0,0,.6),
+    inset 0 0 50px rgba(255,170,80,.08);
+}
+
+.process-wood::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    repeating-linear-gradient(
+      92deg,
+      transparent 0px,
+      transparent 20px,
+      rgba(20,8,2,.2) 22px,
+      transparent 26px
+    );
+}
+
+.process-wood > span {
+  position: absolute;
+
+  left: 50%;
+  bottom: 25px;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+
+  color: rgba(255,255,255,.55);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 5px;
+}
+
+.wood-grain {
+  position: absolute;
+
+  width: 130%;
+  height: 40px;
+
+  left: -15%;
+
+  border: 1px solid rgba(30,10,2,.3);
+
+  border-radius: 50%;
+}
+
+.wood-grain-1 {
+  top: 80px;
+  transform: rotate(-5deg);
+}
+
+.wood-grain-2 {
+  top: 220px;
+  transform: rotate(4deg);
+}
+
+.wood-grain-3 {
+  top: 350px;
+  transform: rotate(-2deg);
+}
+
+
+/* =====================================================
+   BLUEPRINT
+===================================================== */
+
+.process-blueprint {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: min(560px, 45vw);
+
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+}
+
+.process-blueprint svg {
+  width: 100%;
+}
+
+.blueprint-line {
+  stroke: #d78648;
+
+  stroke-width: 1.3;
+
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+
+  vector-effect: non-scaling-stroke;
+}
+
+.blueprint-line.dimension {
+  stroke: rgba(255,255,255,.35);
+
+  stroke-width: .8;
+}
+
+.process-blueprint text {
+  fill: rgba(255,255,255,.45);
+
+  font-family: var(--sans);
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+.blueprint-tag {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: rgba(255,255,255,.5);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.blueprint-tag span {
+  width: 30px;
+  height: 1px;
+
+  background: var(--copper);
+}
+
+.blueprint-tag-one {
+  top: 35%;
+  right: -40px;
+}
+
+.blueprint-tag-two {
+  bottom: 22%;
+  left: -30px;
+}
+
+
+/* =====================================================
+   COPY
+===================================================== */
+
+.process-copy {
+  position: absolute;
+
+  left: max(7vw, 60px);
+  top: 50%;
+
+  width: 390px;
+
+  transform: translateY(-50%);
+
+  z-index: 10;
+
+  opacity: 0;
+}
+
+.process-copy small {
+  display: block;
+
+  margin-bottom: 17px;
+
+  color: var(--copper-light);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.process-copy h2 {
+  font-family: var(--serif);
+
+  font-size: clamp(45px, 4.5vw, 70px);
+
+  font-weight: 600;
+
+  line-height: .95;
+
+  letter-spacing: -2px;
+}
+
+.process-copy h2 em {
+  display: block;
+
+  color: var(--copper);
+
+  font-weight: 500;
+}
+
+.process-copy p {
+  max-width: 330px;
+
+  margin-top: 25px;
+
+  color: #8c8177;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+.process-number {
+  position: absolute;
+
+  left: -20px;
+  top: -110px;
+
+  font-family: var(--serif);
+
+  font-size: 150px;
+
+  line-height: 1;
+
+  color: rgba(255,255,255,.025);
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   PARTÍCULAS
+===================================================== */
+
+.process-particles {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 1px;
+  height: 1px;
+
+  pointer-events: none;
+}
+
+.process-particles span {
+  position: absolute;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: #c47a40;
+
+  opacity: 0;
+}
+
+
+/* =====================================================
+   IMAGEM FINAL
+===================================================== */
+
+.process-final-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  z-index: 2;
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.process-final {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  z-index: 20;
+
+  width: min(900px, 80%);
+
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+
+  opacity: 0;
+}
+
+.process-final-small {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: var(--copper-light);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 6px;
+}
+
+.process-final h2 {
+  font-family: var(--serif);
+
+  font-size: clamp(50px, 6vw, 90px);
+
+  font-weight: 500;
+
+  line-height: .93;
+
+  letter-spacing: -3px;
+}
+
+.process-final h2 strong {
+  display: block;
+
+  color: var(--copper-light);
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.process-final-line {
+  display: block;
+
+  width: 0;
+  height: 2px;
+
+  margin: 30px auto 0;
+
+  background: var(--copper);
+}
+
+
+/* =====================================================
+   DETALHES LATERAIS
+===================================================== */
+
+.process-side-label {
+  position: absolute;
+
+  right: 35px;
+  top: 50%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  transform: translateY(-50%) rotate(90deg);
+
+  color: rgba(255,255,255,.25);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.process-side-label span {
+  width: 40px;
+  height: 1px;
+
+  background: var(--copper);
+}
+
+.process-counter {
+  position: absolute;
+
+  top: 35px;
+  right: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: rgba(255,255,255,.25);
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+.process-counter i {
+  width: 35px;
+  height: 1px;
+
+  background: rgba(255,255,255,.15);
+}
+
+.process-counter-current {
+  color: var(--copper);
+}
+
+
+/* =====================================================
+   SCROLL
+===================================================== */
+
+.process-scroll {
+  position: absolute;
+
+  left: 50%;
+  bottom: 30px;
+
+  transform: translateX(-50%);
+
+  z-index: 30;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: rgba(255,255,255,.3);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.process-scroll span {
+  width: 30px;
+  height: 1px;
+
+  background: var(--copper);
+
+  animation: processScroll 1.5s infinite;
+}
+
+@keyframes processScroll {
+  0%,
+  100% {
+    transform: scaleX(.4);
+    transform-origin: left;
+  }
+
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+
+/* =====================================================
+   PROCESSO MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .process-stage::before {
+    background-size: 40px 40px;
+  }
+
+  .process-side-label,
+  .process-counter {
+    display: none;
+  }
+
+  .process-copy {
+    left: 20px;
+    right: 20px;
+
+    top: auto;
+    bottom: 85px;
+
+    width: auto;
+
+    transform: none;
+  }
+
+  .process-copy small {
+    font-size: 7px;
+  }
+
+  .process-copy h2 {
+    max-width: 330px;
+
+    font-size: 45px;
+  }
+
+  .process-copy p {
+    max-width: 290px;
+
+    font-size: 10px;
+  }
+
+  .process-number {
+    top: -65px;
+    left: -5px;
+
+    font-size: 90px;
+  }
+
+  .process-wood {
+    top: 35%;
+
+    width: 190px;
+    height: 280px;
+  }
+
+  .process-blueprint {
+    top: 34%;
+
+    width: 85vw;
+  }
+
+  .blueprint-tag {
+    display: none;
+  }
+
+  .process-final-image {
+    object-position: center;
+  }
+
+  .process-final {
+    width: calc(100% - 35px);
+  }
+
+  .process-final h2 {
+    font-size: 46px;
+
+    line-height: .96;
+  }
+
+  .process-final-small {
+    font-size: 7px;
+  }
+
+}
+
+/* =====================================================
+   BLUEPRINT - CAVALINHO
+===================================================== */
+
+.process-blueprint {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: min(660px, 49vw);
+
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+
+  z-index: 5;
+}
+
+.process-blueprint svg {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  overflow: visible;
+}
+
+
+/* LINHA PRINCIPAL */
+
+.blueprint-line {
+  fill: none;
+
+  stroke: #d9813d;
+
+  stroke-width: 1.6;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+
+  vector-effect: non-scaling-stroke;
+
+  filter:
+    drop-shadow(
+      0 0 2px rgba(217, 129, 61, 0.12)
+    );
+}
+
+.blueprint-main {
+  stroke: #e18a43;
+
+  stroke-width: 1.8;
+}
+
+
+/* DETALHES INTERNOS */
+
+.blueprint-detail {
+  stroke: rgba(225, 138, 67, 0.72);
+
+  stroke-width: 1;
+}
+
+
+/* LINHAS DE MEDIDA */
+
+.blueprint-line.dimension {
+  stroke: rgba(213, 201, 190, 0.48);
+
+  stroke-width: 0.8;
+}
+
+
+/* LINHAS AUXILIARES */
+
+.blueprint-guide {
+  stroke: rgba(255, 255, 255, 0.1);
+
+  stroke-width: 0.65;
+
+  stroke-dasharray: 5 8;
+}
+
+
+/* TEXTOS */
+
+.blueprint-text {
+  fill: rgba(220, 210, 200, 0.68);
+
+  font-family: var(--sans);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+.blueprint-small-text {
+  fill: rgba(199, 123, 67, 0.65);
+
+  font-family: var(--sans);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   LABELS
+===================================================== */
+
+.blueprint-tag {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: rgba(224, 211, 200, 0.55);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.blueprint-tag span {
+  width: 35px;
+  height: 1px;
+
+  background: var(--copper);
+}
+
+.blueprint-tag-one {
+  top: 27%;
+  right: -35px;
+}
+
+.blueprint-tag-two {
+  left: -25px;
+  bottom: 24%;
+}
+
+.blueprint-material {
+  position: absolute;
+
+  right: -15px;
+  bottom: 8%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  color: rgba(255,255,255,.4);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.blueprint-material span {
+  color: rgba(199,123,67,.55);
+
+  font-size: 6px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .process-blueprint {
+    top: 34%;
+
+    width: 92vw;
+  }
+
+  .blueprint-tag,
+  .blueprint-material {
+    display: none;
+  }
+
+  .blueprint-main {
+    stroke-width: 1.4;
+  }
+
+  .blueprint-detail {
+    stroke-width: .8;
+  }
+
+}
+
+.process-blueprint {
+  position: absolute;
+
+  left: 53%;
+  top: 50%;
+
+  width: min(720px, 53vw);
+
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+
+  z-index: 5;
+}
+
+
+/* =====================================================
+   HERO NOVO
+===================================================== */
+
+.hero-new {
+  position: relative;
+
+  width: 100%;
+  min-height: 720px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #080604;
+}
+
+
+/* =====================================================
+   IMAGEM
+===================================================== */
+
+.hero-new-background {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+}
+
+.hero-new-background img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transform: scale(1.01);
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.hero-new-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 5, 3, 0.98) 0%,
+      rgba(7, 5, 3, 0.94) 18%,
+      rgba(7, 5, 3, 0.76) 36%,
+      rgba(7, 5, 3, 0.28) 60%,
+      rgba(7, 5, 3, 0.08) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(7, 5, 3, 0.75) 0%,
+      transparent 35%
+    );
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.hero-new-container {
+  position: relative;
+
+  z-index: 3;
+
+  width: min(1280px, calc(100% - 60px));
+
+  margin: 0 auto;
+
+  padding-top: 80px;
+}
+
+
+/* =====================================================
+   CONTEÚDO
+===================================================== */
+
+.hero-new-content {
+  width: min(620px, 52%);
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.hero-new-eyebrow {
+  margin-bottom: 22px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+
+  color: #ddd3c9;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2.2px;
+}
+
+.hero-new-eyebrow span {
+  width: 46px;
+  height: 2px;
+
+  flex-shrink: 0;
+
+  background: var(--copper, #d7803d);
+}
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.hero-new h1 {
+  margin: 0;
+
+  max-width: 620px;
+
+  color: #f4eee8;
+
+  font-family: var(--serif);
+
+  font-size: clamp(58px, 5.5vw, 88px);
+
+  font-weight: 600;
+
+  line-height: 0.92;
+
+  letter-spacing: -3.5px;
+}
+
+.hero-new h1 strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--copper-light, #df8945);
+
+  font-weight: 600;
+
+  font-style: italic;
+}
+
+
+/* =====================================================
+   DESCRIÇÃO
+===================================================== */
+
+.hero-new-description {
+  max-width: 500px;
+
+  margin-top: 28px;
+
+  color: rgba(238, 229, 220, 0.67);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+.hero-new-actions {
+  margin-top: 32px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+.hero-new-primary {
+  min-width: 230px;
+  height: 56px;
+
+  padding: 0 19px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  border-radius: 4px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e6954e,
+      #c97335
+    );
+
+  color: #160d07;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-new-primary svg:first-child {
+  font-size: 18px;
+}
+
+.hero-new-primary svg:last-child {
+  margin-left: auto;
+
+  transition: transform 0.3s ease;
+}
+
+.hero-new-primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 40px rgba(211, 126, 57, 0.23);
+}
+
+.hero-new-primary:hover svg:last-child {
+  transform: translateX(4px);
+}
+
+
+/* BOTÃO SECUNDÁRIO */
+
+.hero-new-secondary {
+  height: 56px;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.17);
+
+  border-radius: 4px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.hero-new-secondary svg {
+  transition: transform 0.3s ease;
+}
+
+.hero-new-secondary:hover {
+  color: #fff;
+
+  border-color: rgba(215, 128, 61, 0.7);
+
+  background: rgba(215, 128, 61, 0.08);
+}
+
+.hero-new-secondary:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* =====================================================
+   TEXTO LATERAL
+===================================================== */
+
+.hero-new-signature {
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+
+  transform: translateY(-50%) rotate(90deg)
+    translateY(-40px);
+
+  transform-origin: center;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 6px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.hero-new-signature i {
+  width: 28px;
+  height: 1px;
+
+  display: block;
+
+  background: rgba(216, 128, 61, 0.7);
+}
+
+
+/* =====================================================
+   PARTE INFERIOR
+===================================================== */
+
+.hero-new-bottom {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 4;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.hero-new-bottom-inner {
+  width: min(1280px, calc(100% - 60px));
+
+  height: 65px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* SCROLL */
+
+.hero-new-scroll {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.hero-new-scroll p,
+.hero-new-made {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 6px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.hero-scroll-line {
+  position: relative;
+
+  width: 38px;
+  height: 1px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hero-scroll-line::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: #df8945;
+
+  animation: heroScrollLine 2s ease-in-out infinite;
+}
+
+@keyframes heroScrollLine {
+
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+}
+
+.hero-new-made span {
+  margin: 0 8px;
+
+  color: #d7803d;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .hero-new {
+    min-height: 680px;
+  }
+
+  .hero-new-content {
+    width: 65%;
+  }
+
+  .hero-new h1 {
+    font-size: 62px;
+  }
+
+  .hero-new-signature {
+    display: none;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .hero-new {
+    min-height: 760px;
+
+    align-items: flex-end;
+  }
+
+
+  /* IMAGEM */
+
+  .hero-new-background {
+    height: 100%;
+  }
+
+  .hero-new-background img {
+    object-position: 58% center;
+
+    transform: scale(1);
+  }
+
+
+  /* OVERLAY MOBILE */
+
+  .hero-new-overlay {
+    background:
+      linear-gradient(
+        0deg,
+        #080604 0%,
+        rgba(8, 6, 4, 0.97) 20%,
+        rgba(8, 6, 4, 0.75) 43%,
+        rgba(8, 6, 4, 0.25) 67%,
+        rgba(8, 6, 4, 0.12) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(8, 6, 4, 0.45),
+        transparent 80%
+      );
+  }
+
+
+  /* CONTAINER */
+
+  .hero-new-container {
+    width: calc(100% - 34px);
+
+    padding:
+      300px
+      0
+      100px;
+  }
+
+
+  .hero-new-content {
+    width: 100%;
+  }
+
+
+  /* EYEBROW */
+
+  .hero-new-eyebrow {
+    margin-bottom: 15px;
+
+    gap: 10px;
+
+    font-size: 7px;
+
+    letter-spacing: 1.3px;
+  }
+
+  .hero-new-eyebrow span {
+    width: 28px;
+  }
+
+
+  /* TÍTULO */
+
+  .hero-new h1 {
+    max-width: 100%;
+
+    font-size: clamp(45px, 13vw, 58px);
+
+    line-height: 0.92;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-new h1 strong {
+    margin-top: 5px;
+  }
+
+
+  /* DESCRIÇÃO */
+
+  .hero-new-description {
+    max-width: 340px;
+
+    margin-top: 20px;
+
+    font-size: 10px;
+
+    line-height: 1.65;
+  }
+
+
+  /* BOTÕES */
+
+  .hero-new-actions {
+    width: 100%;
+
+    margin-top: 23px;
+
+    display: block;
+  }
+
+  .hero-new-primary {
+    width: 100%;
+
+    height: 56px;
+  }
+
+  .hero-new-secondary {
+    width: 100%;
+
+    height: 48px;
+
+    margin-top: 9px;
+
+    justify-content: center;
+  }
+
+
+  /* BARRA INFERIOR */
+
+  .hero-new-bottom-inner {
+    width: calc(100% - 34px);
+
+    height: 53px;
+  }
+
+  .hero-new-made {
+    display: none;
+  }
+
+  .hero-new-scroll {
+    margin: 0 auto;
+  }
+
+  .hero-new-scroll p {
+    font-size: 5px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  /* =============================================
+     ÁREA DO PROCESSO
+  ============================================= */
+
+  .process-stage {
+    height: 100svh;
+    min-height: 680px;
+  }
+
+
+  /* =============================================
+     BLOCO DE MADEIRA
+  ============================================= */
+
+  .process-wood {
+    left: 50%;
+    top: 34%;
+
+    width: 245px;
+    height: 360px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 4px;
+  }
+
+
+  /* =============================================
+     BLUEPRINT
+     
+     IMPORTANTE:
+     mesma posição da madeira.
+     Assim parece que estamos desenhando sobre ela.
+  ============================================= */
+
+  .process-blueprint {
+    left: 50%;
+    top: 34%;
+
+    width: 275px;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 6;
+  }
+
+  .process-blueprint svg {
+    width: 100%;
+    height: auto;
+
+    display: block;
+  }
+
+
+  /* desenho principal */
+
+  .blueprint-main {
+    stroke-width: 1.5;
+  }
+
+  .blueprint-detail {
+    stroke-width: 0.9;
+  }
+
+  .blueprint-line.dimension {
+    stroke-width: 0.7;
+  }
+
+
+  /* tira textos externos no celular */
+
+  .blueprint-tag,
+  .blueprint-material {
+    display: none;
+  }
+
+
+  /* =============================================
+     TEXTO DAS ETAPAS
+  ============================================= */
+
+  .process-copy {
+    left: 20px;
+    right: 20px;
+
+    top: auto;
+    bottom: 78px;
+
+    width: auto;
+
+    transform: none;
+
+    z-index: 15;
+  }
+
+  .process-copy h2 {
+    max-width: 340px;
+
+    font-size: clamp(42px, 12vw, 52px);
+
+    line-height: 0.94;
+  }
+
+  .process-copy p {
+    max-width: 330px;
+
+    font-size: 10px;
+
+    line-height: 1.65;
+  }
+
+  .process-number {
+    top: -62px;
+    left: -3px;
+
+    font-size: 90px;
+  }
+
+
+  /* =============================================
+     PARTÍCULAS
+  ============================================= */
+
+  .process-particles {
+    left: 50%;
+    top: 34%;
+  }
+
+
+  /* =============================================
+     ELEMENTOS DESNECESSÁRIOS MOBILE
+  ============================================= */
+
+  .process-side-label,
+  .process-counter {
+    display: none;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .process-final-image {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 100%;
+    height: 68%;
+
+    transform: translateX(-50%);
+
+    object-fit: cover;
+    object-position: 45% center;
+
+    opacity: 0;
+
+    z-index: 2;
+
+    mask-image:
+      linear-gradient(
+        to bottom,
+        #000 0%,
+        #000 65%,
+        rgba(0, 0, 0, 0.85) 78%,
+        transparent 100%
+      );
+
+    -webkit-mask-image:
+      linear-gradient(
+        to bottom,
+        #000 0%,
+        #000 65%,
+        rgba(0, 0, 0, 0.85) 78%,
+        transparent 100%
+      );
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .process-final {
+    left: 20px;
+    right: 20px;
+
+    top: auto;
+    bottom: 80px;
+
+    width: auto;
+
+    transform: none;
+
+    text-align: left;
+  }
+
+  .process-final-small {
+    margin-bottom: 12px;
+
+    font-size: 7px;
+
+    letter-spacing: 5px;
+  }
+
+  .process-final h2 {
+    font-size: clamp(43px, 12vw, 54px);
+
+    line-height: 0.92;
+
+    letter-spacing: -2px;
+  }
+
+  .process-final h2 strong {
+    margin-top: 5px;
+  }
+
+  .process-final-line {
+    margin: 22px 0 0;
+  }
+
+}
+
+/* =====================================================
+   CRÉDITO EWS TECH
+===================================================== */
+
+.footer-bottom {
+  padding: 22px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.footer-bottom > p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 8px;
+  letter-spacing: 0.5px;
+}
+
+
+/* DESENVOLVIDO POR */
+
+.footer-developer {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 8px;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.footer-developer > span {
+  transition: color 0.3s ease;
+}
+
+.footer-developer strong {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #c9793d;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.footer-developer strong::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 1px;
+
+  background: #c9793d;
+
+  transition: width 0.35s ease;
+}
+
+.footer-arrow {
+  display: inline-block;
+
+  font-size: 10px;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* HOVER */
+
+.footer-developer:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-developer:hover strong::after {
+  width: 100%;
+}
+
+.footer-developer:hover .footer-arrow {
+  transform: translate(3px, -3px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .footer-bottom {
+    padding: 20px 0;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    text-align: center;
+  }
+
+  .footer-bottom > p {
+    font-size: 7px;
+  }
+
+  .footer-developer {
+    font-size: 7px;
+  }
+
+  .footer-developer strong {
+    font-size: 8px;
+  }
+
+}

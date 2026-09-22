@@ -1,79 +1,52 @@
-import {
-  FiArrowRight,
-  FiShield,
-  FiTool,
-  FiHeart,
-} from "react-icons/fi";
-
-import {
-  FaWhatsapp,
-  FaHammer,
-  FaHandshake,
-} from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FiArrowRight } from "react-icons/fi";
 
 export default function Hero() {
   return (
-    <>
-      <section className="hero hero-reference" id="inicio">
+    <section className="hero-new" id="inicio">
 
-        <div className="hero-background">
-          <img
-            src="/images/cavalinho.png"
-            alt="Cavalinho artesanal em madeira"
-          />
-        </div>
+      {/* IMAGEM */}
+      <div className="hero-new-background">
+        <img
+          src="/images/mesa.png"
+          alt="Mesa artesanal em madeira e aço produzida pela Feito à Mão"
+        />
+      </div>
 
-        <div className="hero-overlay"></div>
+      {/* SOMBREAMENTO */}
+      <div className="hero-new-overlay"></div>
 
-        <div className="container hero-reference-container">
+      {/* CONTEÚDO */}
+      <div className="container hero-new-container">
 
-          <div className="hero-reference-content">
+        <div className="hero-new-content">
 
-            <div className="hero-badge">
-              <span></span>
-              MARCENARIA & SERRALHERIA ARTESANAL
-            </div>
+          <div className="hero-new-eyebrow">
+            <span></span>
+            MARCENARIA & SERRALHERIA ARTESANAL
+          </div>
 
-            <h1>
-              Madeira, aço e arte
-              <strong>
-                que transformam
-                <br />
-                e criam memórias.
-              </strong>
-            </h1>
+          <h1>
+            Madeira e aço
+            <strong>
+              que transformam
+              <br />
+              espaços.
+            </strong>
+          </h1>
 
-            <div className="hero-reference-features">
+          <p className="hero-new-description">
+            Móveis, estruturas e peças exclusivas produzidas
+            artesanalmente para transformar ideias em projetos únicos.
+          </p>
 
-              <div>
-                <FaHammer />
-
-                <p>
-                  Itens sofisticados para
-                  <br />
-                  ambientes autênticos
-                </p>
-              </div>
-
-              <span className="feature-divider"></span>
-
-              <div>
-                <span className="sparkles">✦</span>
-
-                <p>
-                  Feito à Mão — cada peça
-                  <br />
-                  nasce com propósito
-                </p>
-              </div>
-
-            </div>
+          <div className="hero-new-actions">
 
             <a
               href="https://wa.me/5514998160781?text=Olá! Vim pelo site da Feito à Mão e gostaria de solicitar um orçamento."
               target="_blank"
               rel="noopener noreferrer"
-              className="hero-reference-button"
+              className="hero-new-primary"
             >
               <FaWhatsapp />
 
@@ -82,77 +55,51 @@ export default function Hero() {
               <FiArrowRight />
             </a>
 
-          </div>
+            <a
+              href="#trabalhos"
+              className="hero-new-secondary"
+            >
+              Ver nossos trabalhos
 
-          <div className="hero-handmade-text">
-            <span>Projetos</span>
-            <span>sob medida</span>
-            <span>para o seu</span>
-            <span>espaço.</span>
+              <FiArrowRight />
+            </a>
 
-            <i></i>
           </div>
 
         </div>
-      </section>
 
-      <section className="hero-benefits">
-        <div className="container hero-benefits-grid">
+        {/* TEXTO DECORATIVO */}
+        <div className="hero-new-signature">
+          <span>MADEIRA</span>
+          <i></i>
+          <span>AÇO</span>
+          <i></i>
+          <span>PROPÓSITO</span>
+        </div>
 
-          <article>
-            <FiShield />
+      </div>
 
-            <div>
-              <strong>Qualidade</strong>
-              <p>
-                Materiais selecionados
-                <br />
-                e ótimo acabamento.
-              </p>
-            </div>
-          </article>
+      {/* RODAPÉ DO HERO */}
+      <div className="hero-new-bottom">
 
-          <article>
-            <FiTool />
+        <div className="container hero-new-bottom-inner">
 
-            <div>
-              <strong>Personalização</strong>
-              <p>
-                Projetos feitos sob medida
-                <br />
-                para cada cliente.
-              </p>
-            </div>
-          </article>
+          <div className="hero-new-scroll">
+            <span className="hero-scroll-line"></span>
 
-          <article>
-            <FaHandshake />
+            <p>DESCUBRA NOSSO TRABALHO</p>
+          </div>
 
-            <div>
-              <strong>Compromisso</strong>
-              <p>
-                Do primeiro contato
-                <br />
-                à entrega final.
-              </p>
-            </div>
-          </article>
-
-          <article>
-            <FiHeart />
-
-            <div>
-              <strong>Tradição</strong>
-              <p>
-                Trabalho artesanal em
-                <br />
-                madeira e aço.
-              </p>
-            </div>
-          </article>
+          <p className="hero-new-made">
+            FEITO À MÃO
+            <span> / </span>
+            PEÇAS COM PROPÓSITO
+          </p>
 
         </div>
-      </section>
-    </>
+
+      </div>
+
+    </section>
   );
 }

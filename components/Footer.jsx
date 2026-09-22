@@ -40,13 +40,24 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>
-            © {new Date().getFullYear()} Feito à Mão. Todos os direitos
-            reservados.
-          </p>
+  <p>
+    © {new Date().getFullYear()} Feito à Mão. Todos os direitos reservados.
+  </p>
 
-          <p>Peças feitas com propósito.</p>
-        </div>
+      <a
+        href="https://edwyn-portfolio.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="footer-developer"
+      >
+        <span>Desenvolvido por</span>
+
+        <strong>
+          EWS TECH
+          <span className="footer-arrow">↗</span>
+        </strong>
+      </a>
+    </div>
       </div>
     </footer>
   );
