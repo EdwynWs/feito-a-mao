@@ -13,11 +13,13 @@ export default function Header() {
       <div className="container header-container">
 
         <a href="#inicio" className="brand" onClick={fecharMenu}>
-          <div className="brand-mark">
-            <span>F</span>
-            <span>M</span>
-          </div>
-
+          <div className="brand-logo-wrapper">
+          <img
+            src="/images/logo.jpg"
+            alt="Feito à Mão - Marcenaria e Serralheria Artesanal"
+            className="brand-logo"
+          />
+        </div>
           <div className="brand-text">
             <strong>Feito à Mão</strong>
             <span>Marcenaria & Serralheria</span>

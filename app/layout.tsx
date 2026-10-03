@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   title: "Feito à Mão | Marcenaria & Serralheria Artesanal",
   description:
     "Móveis, restaurações, serralheria e peças artesanais feitas sob medida.",
+    icons: {
+    icon: "/images/logo.jpg",
+    shortcut: "/images/logo.jpg",
+    apple: "/images/logo.jpg",
+  },
 };
 
 export default function RootLayout({

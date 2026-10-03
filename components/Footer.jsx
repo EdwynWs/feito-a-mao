@@ -6,9 +6,12 @@ export default function Footer() {
       <div className="container">
         <div className="footer-top">
           <a href="#inicio" className="footer-brand">
-            <div className="footer-mark">
-              <span>F</span>
-              <span>M</span>
+            <div className="footer-logo-wrapper">
+              <img
+                src="/images/logo.jpg"
+                alt="Feito à Mão"
+                className="footer-logo"
+              />
             </div>
 
             <div>

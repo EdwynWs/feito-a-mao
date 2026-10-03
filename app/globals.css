@@ -4811,3 +4811,502 @@ img {
   }
 
 }
+
+/* =====================================================
+   LOGO OFICIAL
+===================================================== */
+
+.brand-logo-wrapper {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(199, 123, 67, 0.35);
+
+  background: #21170f;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1.05);
+}
+
+
+/* FOOTER */
+
+.footer-logo-wrapper {
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(199, 123, 67, 0.28);
+
+  background: #21170f;
+}
+
+.footer-logo {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1.05);
+}
+
+
+/* =====================================================
+   GALERIA REAL
+===================================================== */
+
+.galeria-real {
+  position: relative;
+
+  padding: 125px 0 120px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(199, 123, 67, 0.1),
+      transparent 30%
+    ),
+    #0f0c09;
+}
+
+
+/* GRID SUTIL */
+
+.galeria-real::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.22;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+}
+
+
+.galeria-real .container {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.galeria-real-header {
+  margin-bottom: 52px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+
+.galeria-real-title {
+  max-width: 720px;
+}
+
+
+.galeria-real-header h2 {
+  margin: 0;
+
+  font-family: var(--serif);
+
+  font-size: clamp(44px, 4.2vw, 68px);
+
+  font-weight: 600;
+
+  line-height: 0.98;
+
+  letter-spacing: -2.5px;
+}
+
+
+.galeria-real-header h2 span {
+  color: var(--copper);
+
+  font-style: italic;
+}
+
+
+.galeria-real-header-right {
+  width: 340px;
+
+  flex-shrink: 0;
+}
+
+
+.galeria-real-header-right p {
+  color: var(--text-soft);
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   CARROSSEL
+===================================================== */
+
+.galeria-real-slider {
+  display: flex;
+
+  gap: 18px;
+
+  overflow-x: auto;
+
+  padding-bottom: 4px;
+
+  scroll-behavior: smooth;
+
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+
+  cursor: grab;
+}
+
+
+.galeria-real-slider:active {
+  cursor: grabbing;
+}
+
+
+.galeria-real-slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.galeria-real-card {
+  flex: 0 0 34%;
+
+  min-width: 0;
+
+  margin: 0;
+
+  scroll-snap-align: start;
+}
+
+
+/* alterna tamanhos */
+
+.galeria-real-card:nth-child(3n + 2) {
+  flex-basis: 27%;
+}
+
+
+.galeria-real-image {
+  position: relative;
+
+  height: 500px;
+
+  overflow: hidden;
+
+  background: #090705;
+}
+
+
+.galeria-real-card:nth-child(3n + 2)
+.galeria-real-image {
+  height: 425px;
+
+  margin-top: 42px;
+}
+
+
+/* FOTO */
+
+.galeria-real-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.75s ease,
+    filter 0.5s ease;
+}
+
+
+.galeria-real-card:hover
+.galeria-real-image img {
+  transform: scale(1.045);
+}
+
+
+/* SOMBRA */
+
+.galeria-real-shade {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(7, 5, 3, 0.8),
+      transparent 45%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(7, 5, 3, 0.15),
+      transparent 30%
+    );
+}
+
+
+/* =====================================================
+   INFORMAÇÃO DA FOTO
+===================================================== */
+
+.galeria-real-info {
+  position: absolute;
+
+  left: 18px;
+  right: 18px;
+  bottom: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.galeria-real-info span {
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.galeria-real-info p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+
+/* =====================================================
+   TEXTO INFERIOR
+===================================================== */
+
+.galeria-real-bottom {
+  margin-top: 27px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: rgba(255, 255, 255, 0.34);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+.galeria-real-bottom span {
+  width: 35px;
+  height: 1px;
+
+  background: var(--copper);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .galeria-real-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+  }
+
+
+  .galeria-real-header-right {
+    width: min(100%, 520px);
+  }
+
+
+  .galeria-real-card {
+    flex-basis: 52%;
+  }
+
+
+  .galeria-real-card:nth-child(3n + 2) {
+    flex-basis: 43%;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .brand-logo-wrapper {
+    width: 44px;
+    height: 44px;
+  }
+
+
+  .footer-logo-wrapper {
+    width: 53px;
+    height: 53px;
+  }
+
+
+  .galeria-real {
+    padding: 88px 0 90px;
+  }
+
+
+  .galeria-real-header {
+    margin-bottom: 34px;
+
+    gap: 20px;
+  }
+
+
+  .galeria-real-header h2 {
+    font-size: clamp(
+      40px,
+      11vw,
+      52px
+    );
+
+    line-height: 0.96;
+
+    letter-spacing: -2px;
+  }
+
+
+  .galeria-real-header-right p {
+    max-width: 340px;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+
+  /* ESCONDE SETAS NO CELULAR
+     usuário arrasta com dedo */
+
+  .galeria-real-header-right
+  .slider-buttons {
+    display: none;
+  }
+
+
+  /* 1 FOTO + PEDACINHO DA PRÓXIMA */
+
+  .galeria-real-card,
+  .galeria-real-card:nth-child(3n + 2) {
+    flex: 0 0 84%;
+  }
+
+
+  .galeria-real-image,
+  .galeria-real-card:nth-child(3n + 2)
+  .galeria-real-image {
+    height: 500px;
+
+    margin-top: 0;
+  }
+
+
+  .galeria-real-bottom {
+    margin-top: 22px;
+
+    font-size: 6px;
+
+    letter-spacing: 2px;
+  }
+
+}
+
+
+/* =====================================================
+   CELULARES PEQUENOS
+===================================================== */
+
+@media (max-width: 390px) {
+
+  .galeria-real-card,
+  .galeria-real-card:nth-child(3n + 2) {
+    flex-basis: 88%;
+  }
+
+
+  .galeria-real-image,
+  .galeria-real-card:nth-child(3n + 2)
+  .galeria-real-image {
+    height: 455px;
+  }
+
+}
