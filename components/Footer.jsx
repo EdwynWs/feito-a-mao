@@ -45,7 +45,7 @@ export default function Footer() {
   </p>
 
       <a
-        href="https://edwyn-portfolio.vercel.app/"
+        href="https://ews-tech.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
         className="footer-developer"
